@@ -315,6 +315,19 @@ h4#image-gallery-title {font-size: 25px;font-weight: 700;text-align: center; mar
 	.mob-show {display:block;margin-top:5px;}
 	.desktop-show {display:none;}
 	.social-icon {margin-top:5px;}
+	.navbar-header .navbar-brand img
+	{
+		width: 110px;
+		margin-top: 0.7rem;
+		height: 65px;
+		margin-left: 4rem;
+	}
+	video
+	{
+		width: 300px;
+		margin-top: 0.7rem;
+		height: 150px;
+	}
 	
 }
 
@@ -356,6 +369,19 @@ h4#image-gallery-title {font-size: 25px;font-weight: 700;text-align: center; mar
 	.project-location {font-size: 16px;}
 	.abt-mission {min-height: 355px;}
 	div#image-gallery .modal-body img {height:auto;}
+	.navbar-header .navbar-brand img
+	{
+		width: 110px;
+		margin-top: 0.7rem;
+		height: 65px;
+		margin-left: 4rem;
+	}
+	video
+	{
+		width: 700px;
+		margin-top: 0.7rem;
+		height: 250px;
+	}
 }
 
 @media only screen and (max-width: 1199px) and (min-width: 1024px)  { 
@@ -377,6 +403,13 @@ h4#image-gallery-title {font-size: 25px;font-weight: 700;text-align: center; mar
 	.project-details h2{font-size: 25px;}
 	.project-location {font-size: 16px;}
 	.abt-mission {min-height: 355px;}
+	.navbar-header .navbar-brand img
+	{
+		width: 110px;
+		margin-top: 0.7rem;
+		height: 65px;
+		margin-left: 4rem;
+	}
 
 }
 
