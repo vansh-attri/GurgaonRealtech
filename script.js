@@ -3,7 +3,7 @@ function sendemail() {
         Host: "smtp.elasticemail.com",
         Username: "bdcommerce09@gmail.com",
         Password: "7247E6A8582F935491EC67310B93F9CB4EA8",
-        To: 'bdcommerce09@gmail.com',
+        To: 'Adesh_1982@yahoo.co.in',
         From: 'bdcommerce09@gmail.com',
         Subject: "Message from Website",
         Body: "Name: " + document.getElementById("name").value
@@ -19,7 +19,7 @@ function sendemail2() {
         Host: "smtp.elasticemail.com",
         Username: "bdcommerce09@gmail.com",
         Password: "7247E6A8582F935491EC67310B93F9CB4EA8",
-        To: 'vanshattri123@gmail.com',
+        To: 'Adesh_1982@yahoo.co.in',
         From: 'bdcommerce09@gmail.com',
         Subject: "Message from Website",
         Body: "Name: " + document.getElementById("name2").value
@@ -35,7 +35,7 @@ function sendemail1() {
         Host: "smtp.elasticemail.com",
         Username: "bdcommerce09@gmail.com",
         Password: "7247E6A8582F935491EC67310B93F9CB4EA8",
-        To: 'bdcommerce09@gmail.com',
+        To: 'Adesh_1982@yahoo.co.in',
         From: 'bdcommerce09@gmail.com',
         Subject: "Message from Website",
         Body: "Name: " + document.getElementById("name1").value
