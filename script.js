@@ -85,4 +85,56 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    // Properties Dropdown Header Navigation Handler
+    var dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(function (toggle) {
+        toggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var parent = toggle.closest('.dropdown');
+            if (parent) {
+                // Toggle open state
+                var wasOpen = parent.classList.contains('open');
+                document.querySelectorAll('.dropdown.open').forEach(function (el) {
+                    el.classList.remove('open');
+                });
+                if (!wasOpen) {
+                    parent.classList.add('open');
+                }
+            }
+        });
+    });
+
+    // Close open dropdowns when clicking outside
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown.open').forEach(function (el) {
+                el.classList.remove('open');
+            });
+        }
+    });
+
+    // Initialize Owl Carousel if jQuery and owlCarousel plugin are loaded
+    if (window.jQuery && jQuery.fn && jQuery.fn.owlCarousel) {
+        jQuery('.owl-carousel').each(function () {
+            var $this = jQuery(this);
+            if (!$this.hasClass('owl-loaded')) {
+                $this.owlCarousel({
+                    loop: true,
+                    margin: 15,
+                    nav: true,
+                    dots: true,
+                    autoplay: true,
+                    autoplayTimeout: 4000,
+                    autoplayHoverPause: true,
+                    responsive: {
+                        0: { items: 1 },
+                        600: { items: 2 },
+                        1000: { items: 3 }
+                    }
+                });
+            }
+        });
+    }
 });
