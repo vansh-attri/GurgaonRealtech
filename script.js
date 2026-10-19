@@ -47,3 +47,42 @@ function sendemail1() {
         message => alert('Message Sent Successfully!')
     );
   }
+
+// Pre-fill property name in the enquiry modal when 'Enquire Now' is clicked
+document.addEventListener('click', function (e) {
+    var enqBtn = e.target.closest ? e.target.closest('a.enq[data-project]') : null;
+    if (enqBtn) {
+        var pName = enqBtn.getAttribute('data-project');
+        if (pName) {
+            var propInput = document.getElementById('property_name');
+            if (propInput) {
+                propInput.value = pName;
+            }
+            var nameInputs = document.querySelectorAll('input[name="your-propertyName"]');
+            for (var i = 0; i < nameInputs.length; i++) {
+                nameInputs[i].value = pName;
+            }
+        }
+    }
+});
+
+// Smart redirect for homepage search form
+document.addEventListener('DOMContentLoaded', function () {
+    var searchForm = document.querySelector('.adv-search-block form');
+    if (searchForm) {
+        searchForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var typeSelect = document.getElementById('property_type');
+            var val = typeSelect ? typeSelect.value : '';
+            if (val === 'Commercial') {
+                window.location.href = 'commercial_properties.html';
+            } else if (val === 'Residential') {
+                window.location.href = 'residential_properties.html';
+            } else if (val === 'Offices') {
+                window.location.href = 'offices.html';
+            } else {
+                window.location.href = 'all_properties.html';
+            }
+        });
+    }
+});
